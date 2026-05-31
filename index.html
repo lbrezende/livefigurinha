@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Claude Code Live — Construa um app ao vivo, todo dia às 9h</title>
+    <meta name="description" content="Todo dia das 9h às 10h, o Leandro abre o computador e constrói ao vivo um app de figurinhas da Copa usando Claude Code e IA. Sem programar. Gratuito." />
+    <meta name="theme-color" content="#0a0a0f" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Claude Code Live — Construa um app ao vivo, todo dia às 9h" />
+    <meta property="og:description" content="Vamos construir juntos um app do zero, ao vivo, sem programar. Gratuito. Todo dia das 9h às 10h." />
+    <meta property="og:url" content="https://livefigurinha.vercel.app" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/styles.css" />
+
+    <!-- Start of Clickmax SDK Code -->
+    <script>
+    (()=>{let e="workshop-ia-unicornio-2026",c="/f/tpu16iqmi5V1jfjaG2JBt",t=window;if(!t.cxs){function s(e,...c){t._cx?t._cx.callMethod.apply(t._cx,[e,...c]):t.cxs.queue.push([e,...c])}s.queue=[],t.cxs=s;{let t=encodeURIComponent,s=document,n=`https://api.clickmax.io/sdk/script.js?ps=${t(e)}&pg=${t(c)}`,p="script",i=s.createElement(p);i.async=!0,i.src=n;let a=s.getElementsByTagName(p)[0];a.parentNode.insertBefore(i,a)}}cxs("init",e,c)})();
+
+    cxs('track', 'page_view');
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://api.clickmax.io/tr/workshop-ia-unicornio-2026?ty=page_view&pg=%2Ff%2Ftpu16iqmi5V1jfjaG2JBt&pl=%7B%22noscript%22%3A1%7D"/></noscript>
+    <!-- End of Clickmax SDK Code -->
+  </head>
+  <body>
+    <!-- Background grain + gradient layers -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--a" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow--b" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="#top">
+          <span class="brand__mark" aria-hidden="true">
+            <span class="brand__dot"></span>
+          </span>
+          <span class="brand__text">Claude Code <em>Live</em></span>
+        </a>
+        <div class="topbar__meta">
+          <span class="pill pill--live">
+            <span class="pill__dot"></span>
+            AO VIVO
+          </span>
+          <span class="topbar__time">9h–10h · seg a sex</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__left">
+            <div class="badges">
+              <span class="badge">Gratuito</span>
+              <span class="badge badge--live">
+                <span class="badge__dot"></span> Ao vivo
+              </span>
+              <span class="badge">Todo dia às 9h</span>
+            </div>
+
+            <h1 class="hero__title">
+              Vamos construir<br />
+              juntos um app<br />
+              <span class="hero__title-accent">
+                do zero, ao vivo<span class="hero__title-cursor">▍</span>
+              </span><br />
+              <span class="hero__title-strike">sem programar</span>
+              <span class="hero__title-strike-label">_</span>
+            </h1>
+
+            <p class="hero__lede">
+              Todo dia, das <strong>9h às 10h</strong>, o Leandro abre o computador e constrói ao vivo
+              usando <span class="hl">Claude Code</span> e IA. Você acompanha cada passo,
+              <span class="hl-soft">do problema ao link no ar</span>. Inscreva-se:
+            </p>
+
+            <form
+              class="capture"
+              data-cx-ingest-form
+              data-cx-success-message="Inscrição confirmada! Você vai receber o aviso antes da próxima live começar."
+              data-cx-locale="pt-BR"
+              novalidate>
+              <div class="capture__row">
+                <input class="capture__input" data-cx-field="name" type="text" placeholder="Seu nome" autocomplete="name" required />
+                <input class="capture__input" data-cx-field="email" type="email" placeholder="Seu e-mail" autocomplete="email" required />
+              </div>
+              <div class="capture__row">
+                <input class="capture__input" data-cx-field="telephone" type="tel" placeholder="Seu telefone (WhatsApp)" autocomplete="tel" />
+              </div>
+
+              <label class="capture__check">
+                <input data-cx-field="lgpdApproved" type="checkbox" required />
+                <span>Concordo em receber comunicações sobre as lives.</span>
+              </label>
+
+              <input data-cx-field="website" type="text" hidden autocomplete="off" tabindex="-1" />
+
+              <button class="cta" type="submit">
+                <span class="cta__label">Quero acompanhar as lives</span>
+                <span class="cta__arrow" aria-hidden="true">→</span>
+                <span class="cta__shine" aria-hidden="true"></span>
+              </button>
+
+              <p class="capture__foot">
+                Gratuito. Você recebe o aviso antes de cada live começar.
+              </p>
+            </form>
+          </div>
+
+          <!-- Right: live preview card -->
+          <aside class="hero__right" aria-label="Próxima live">
+            <div class="preview">
+              <div class="preview__chrome">
+                <span class="preview__tab is-active">
+                  <span class="preview__tab-dot"></span>
+                  claude-code · live
+                </span>
+                <span class="preview__tab">livefigurinha.vercel.app</span>
+              </div>
+
+              <div class="preview__bar">
+                <span class="preview__bar-dot"></span>
+                <span class="preview__bar-dot"></span>
+                <span class="preview__bar-dot"></span>
+                <span class="preview__bar-url">
+                  ~/livefigurinha
+                </span>
+                <span class="preview__bar-live">
+                  <span class="preview__bar-pulse"></span> ON AIR
+                </span>
+              </div>
+
+              <div class="preview__body">
+                <div class="line"><span class="line__prompt">$</span> <span class="line__cmd">claude code</span><span class="cursor">▍</span></div>
+                <div class="line line--muted">→ leyendo el problema…</div>
+                <div class="line line--ok">✓ figurinhas duplicadas detectadas</div>
+                <div class="line line--ok">✓ albumzão.db pronto</div>
+                <div class="line"><span class="line__prompt">$</span> <span class="line__cmd">vercel deploy --prod</span></div>
+                <div class="line line--link">https://livefigurinha.vercel.app · 200 OK</div>
+
+                <div class="preview__counter">
+                  <div class="preview__counter-label">próxima live em</div>
+                  <div class="preview__counter-time" data-countdown>—</div>
+                  <div class="preview__counter-sub">amanhã · 9h00 (BRT)</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="preview__sticker preview__sticker--a" aria-hidden="true">
+              <div class="sticker">
+                <div class="sticker__shine"></div>
+                <div class="sticker__num">10</div>
+                <div class="sticker__name">CLAUDE</div>
+              </div>
+            </div>
+            <div class="preview__sticker preview__sticker--b" aria-hidden="true">
+              <div class="sticker sticker--alt">
+                <div class="sticker__shine"></div>
+                <div class="sticker__num">07</div>
+                <div class="sticker__name">CODE</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Ticker -->
+        <div class="ticker" aria-hidden="true">
+          <div class="ticker__track">
+            <span>● AO VIVO</span><span>·</span>
+            <span>todo dia 9h</span><span>·</span>
+            <span>do problema ao link no ar</span><span>·</span>
+            <span>sem programar</span><span>·</span>
+            <span>Claude Code + IA</span><span>·</span>
+            <span>● AO VIVO</span><span>·</span>
+            <span>app de figurinhas da Copa</span><span>·</span>
+            <span>1 hora · 1 commit · 1 deploy</span><span>·</span>
+            <span>gratuito</span><span>·</span>
+            <span>● AO VIVO</span><span>·</span>
+            <span>todo dia 9h</span><span>·</span>
+            <span>do problema ao link no ar</span><span>·</span>
+            <span>sem programar</span><span>·</span>
+            <span>Claude Code + IA</span><span>·</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN / FEATURES -->
+      <section class="learn">
+        <div class="container">
+          <div class="learn__head">
+            <span class="eyebrow">Aprenda na prática</span>
+            <h2 class="learn__title">
+              Construir <span class="learn__title-accent">ao vivo</span>,
+              um app de figurinhas da Copa,
+              <span class="learn__title-mute">passo a passo</span>.
+            </h2>
+            <p class="learn__sub">
+              Você vai acompanhar da instalação do Claude Code até o app pronto no ar — com link real, que dá pra abrir no celular.
+            </p>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <div class="step__num">01</div>
+              <div class="step__icon" aria-hidden="true">📦</div>
+              <h3 class="step__title">Instalação do Claude Code</h3>
+              <p class="step__text">
+                Do terminal vazio à primeira conversa com a IA dentro do seu projeto. Você vai sair daqui com o ambiente igual ao meu.
+              </p>
+              <div class="step__tag">setup · 10 min</div>
+            </li>
+            <li class="step">
+              <div class="step__num">02</div>
+              <div class="step__icon" aria-hidden="true">🧠</div>
+              <h3 class="step__title">Do problema ao produto</h3>
+              <p class="step__text">
+                A gente parte de uma dor real — "minhas figurinhas duplicadas viraram um caos" — e transforma isso em telas, fluxos e código rodando.
+              </p>
+              <div class="step__tag">shape · 25 min</div>
+            </li>
+            <li class="step">
+              <div class="step__num">03</div>
+              <div class="step__icon" aria-hidden="true">🚀</div>
+              <h3 class="step__title">App com link real</h3>
+              <p class="step__text">
+                Deploy ao vivo. Cola o link no grupo da família e mostra funcionando. Sem "vai estar pronto semana que vem".
+              </p>
+              <div class="step__tag">ship · 25 min</div>
+            </li>
+          </ol>
+
+          <div class="learn__strip">
+            <div class="strip__item"><span class="strip__k">1h</span><span class="strip__v">por dia</span></div>
+            <div class="strip__divider" aria-hidden="true"></div>
+            <div class="strip__item"><span class="strip__k">0</span><span class="strip__v">linhas digitadas à mão</span></div>
+            <div class="strip__divider" aria-hidden="true"></div>
+            <div class="strip__item"><span class="strip__k">1</span><span class="strip__v">deploy ao vivo</span></div>
+            <div class="strip__divider" aria-hidden="true"></div>
+            <div class="strip__item"><span class="strip__k">R$0</span><span class="strip__v">pra acompanhar</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOST -->
+      <section class="host">
+        <div class="container host__grid">
+          <div class="host__card">
+            <div class="host__avatar" aria-hidden="true">
+              <span>LR</span>
+              <span class="host__avatar-live"></span>
+            </div>
+            <div class="host__meta">
+              <span class="host__eyebrow">apresentado por</span>
+              <h3 class="host__name">Leandro Rezende</h3>
+              <p class="host__role">
+                Construindo produto com IA. <em>Sem teoria, sem slide bonito — só código no ar, todo dia.</em>
+              </p>
+            </div>
+          </div>
+
+          <blockquote class="host__quote">
+            <p>
+              "A ideia é simples: <strong>se eu consigo construir isso ao vivo em 1 hora,
+              você consegue construir o seu</strong>. Apareça às 9h e descubra como."
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq">
+        <div class="container">
+          <div class="faq__head">
+            <span class="eyebrow">Perguntas frequentes</span>
+            <h2 class="faq__title">A resposta curta antes de você fechar a aba.</h2>
+          </div>
+
+          <div class="faq__list">
+            <details class="qa">
+              <summary>Preciso saber programar?</summary>
+              <p>Não. A live inteira é construída conversando com a IA. Se você sabe escrever um WhatsApp, você consegue acompanhar.</p>
+            </details>
+            <details class="qa">
+              <summary>É pago?</summary>
+              <p>É <strong>100% gratuito</strong>. Você só precisa se inscrever pra receber o aviso antes da live começar.</p>
+            </details>
+            <details class="qa">
+              <summary>Onde vai rolar?</summary>
+              <p>Direto no link que você vai receber por e-mail/WhatsApp. Aviso 10 minutos antes de cada live começar.</p>
+            </details>
+            <details class="qa">
+              <summary>E se eu perder o dia?</summary>
+              <p>Sem problema. As lives são em série — cada dia avança um pedaço do app. Você pode entrar quando quiser e o link do app sempre fica no ar.</p>
+            </details>
+            <details class="qa">
+              <summary>Que tipo de app vamos construir?</summary>
+              <p>Um app de figurinhas da Copa: cadastra suas figurinhas, marca as repetidas, encontra trocas. Real, com link, dá pra usar no celular.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIG CTA -->
+      <section class="bigcta">
+        <div class="container">
+          <div class="bigcta__card">
+            <div class="bigcta__col">
+              <span class="badge badge--live">
+                <span class="badge__dot"></span> ao vivo · todo dia 9h
+              </span>
+              <h2 class="bigcta__title">
+                Amanhã 9h em ponto.<br />
+                <span class="bigcta__accent">Te vejo lá?</span>
+              </h2>
+              <p class="bigcta__sub">
+                Inscrição leva 10 segundos. Você recebe o link antes da live começar.
+              </p>
+            </div>
+            <a class="cta cta--ghost" href="#top">
+              <span class="cta__label">Quero acompanhar as lives</span>
+              <span class="cta__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span>© Claude Code Live · feito ao vivo, todo dia.</span>
+        <span class="footer__brand">
+          <span class="brand__mark" aria-hidden="true"><span class="brand__dot"></span></span>
+          livefigurinha.vercel.app
+        </span>
+      </div>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
