@@ -195,8 +195,8 @@ img, svg { display: block; max-width: 100%; }
 
 .hero__title {
   color: #fff;
-  font-size: clamp(40px, 5.4vw, 76px);
-  line-height: 0.9;
+  font-size: clamp(38px, 4.2vw, 56px);
+  line-height: 0.95;
   margin: 0 0 26px;
 }
 
@@ -347,7 +347,8 @@ img, svg { display: block; max-width: 100%; }
 
 .learn__title {
   color: var(--ink);
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(38px, 4.6vw, 60px);
+  line-height: 0.95;
   margin: 0 0 20px;
 }
 
